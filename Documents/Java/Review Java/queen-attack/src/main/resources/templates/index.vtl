@@ -1,0 +1,115 @@
+<h1 class="well">Queen Attack</h1>
+
+<h2>Playing chess? Check to see if your queen is in the position to attack!</h2>
+<h3>Enter the coordinates of your queen and your opponent's piece below.</h3>
+<div class="form container">
+	<form class="form-horizontal" role="form" action="/queen-attack" method="post">
+  		<div class="form-group form-group-lg">
+  			<p>Your Queen:</p>
+    		<div class="col-xs-3">
+  				<label for="queenx">x-coordinate</label>
+  				<input class="form-control" type="number" min="1" max="8" name="queenx" id="queenx">
+			</div>
+			<div class="col-xs-3">
+  				<label for="queeny">y-coordinate</label>
+  				<input class="form-control" type="number" min="1" max="8" name="queeny" id="queeny">
+			</div>
+  		</div>
+  		<hr>
+  		<div class="form-group form-group-lg">
+  			<p>Your Opponent:</p>
+    		<div class="col-xs-3">
+  				<label for="opponentx">x-coordinate</label>
+  				<input class="form-control" type="number" min="1" max="8" name="opponentx" id="opponentx">
+			</div>
+			<div class="col-xs-3">
+  				<label for="opponenty">y-coordinate</label>
+  				<input class="form-control" type="number" min="1" max="8" name="opponenty" id="opponenty">
+			</div>
+  		</div>
+  		<button type="submit" class="btn btn-warning">Submit</button>
+	</form>
+</div>
+
+<div id="board" class="col-12 col-sm-8 col-lg-6">
+  <div class="row">
+    <div id="18" value="28" class="col-lg-1 col-sm-1 col-1 box valid">1,8</div>
+    <div id="28" value="28" class="col-lg-1 col-sm-1 col-1 box valid">2,8</div>
+    <div id="38" value="38" class="col-lg-1 col-sm-1 col-1 box valid">3,8</div>
+    <div id="48" value="48" class="col-lg-1 col-sm-1 col-1 box valid">4,8</div>
+    <div id="58" value="58" class="col-lg-1 col-sm-1 col-1 box valid">5,8</div>
+    <div id="68" value="68" class="col-lg-1 col-sm-1 col-1 box valid">6,8</div>
+    <div id="78" value="78" class="col-lg-1 col-sm-1 col-1 box valid">7,8</div>
+    <div id="88" value="88" class="col-lg-1 col-sm-1 col-1 box valid">8,8</div>
+  </div>
+  <div class="row">
+    <div id="17" value="17" class="col-lg-1 col-sm-1 col-1 box valid">1,7</div>
+    <div id="27" value="27" class="col-lg-1 col-sm-1 col-1 box valid">2,7</div>
+    <div id="37" value="37" class="col-lg-1 col-sm-1 col-1 box valid">3,7</div>
+    <div id="47" value="47" class="col-lg-1 col-sm-1 col-1 box valid">4,7</div>
+    <div id="57" value="57" class="col-lg-1 col-sm-1 col-1 box valid">5,7</div>
+    <div id="67" value="67" class="col-lg-1 col-sm-1 col-1 box valid">6,7</div>
+    <div id="77" value="77" class="col-lg-1 col-sm-1 col-1 box valid">7,7</div>
+    <div id="87" value="87" class="col-lg-1 col-sm-1 col-1 box valid">8.7</div>
+  </div>
+  <div class="row">
+    <div id="16" value="16" class="col-lg-1 col-sm-1 col-1 box valid">1,6</div>
+    <div id="26" value="26" class="col-lg-1 col-sm-1 col-1 box valid">2,6</div>
+    <div id="36" value="36" class="col-lg-1 col-sm-1 col-1 box valid">3,6</div>
+    <div id="46" value="46" class="col-lg-1 col-sm-1 col-1 box valid">4,6</div>
+    <div id="56" value="56" class="col-lg-1 col-sm-1 col-1 box valid">5,6</div>
+    <div id="66" value="66" class="col-lg-1 col-sm-1 col-1 box valid">6,6</div>
+    <div id="76" value="76" class="col-lg-1 col-sm-1 col-1 box valid">7,6</div>
+    <div id="86" value="86" class="col-lg-1 col-sm-1 col-1 box valid">8,6</div>
+  </div>
+  <div class="row">
+    <div id="15" value="15" class="col-lg-1 col-sm-1 col-1 box valid">1,5</div>
+    <div id="25" value="25" class="col-lg-1 col-sm-1 col-1 box valid">2,5</div>
+    <div id="35" value="35" class="col-lg-1 col-sm-1 col-1 box valid">3,5</div>
+    <div id="45" value="45" class="col-lg-1 col-sm-1 col-1 box valid">4,5</div>
+    <div id="55" value="55" class="col-lg-1 col-sm-1 col-1 box valid">5,5</div>
+    <div id="65" value="65" class="col-lg-1 col-sm-1 col-1 box valid">6,5</div>
+    <div id="75" value="75" class="col-lg-1 col-sm-1 col-1 box valid">7,5</div>
+    <div id="85" value="85" class="col-lg-1 col-sm-1 col-1 box valid">8,5</div>
+  </div>
+  <div class="row">
+    <div id="14" value="14" class="col-lg-1 col-sm-1 col-1 box valid">1,4</div>
+    <div id="24" value="24" class="col-lg-1 col-sm-1 col-1 box valid">2,4</div>
+    <div id="34" value="34" class="col-lg-1 col-sm-1 col-1 box valid">3,4</div>
+    <div id="44" value="44" class="col-lg-1 col-sm-1 col-1 box valid">4,4</div>
+    <div id="54" value="54" class="col-lg-1 col-sm-1 col-1 box valid">5,4</div>
+    <div id="64" value="64" class="col-lg-1 col-sm-1 col-1 box valid">6,4</div>
+    <div id="74" value="74" class="col-lg-1 col-sm-1 col-1 box valid">7,4</div>
+    <div id="84" value="84" class="col-lg-1 col-sm-1 col-1 box valid">8,4</div>
+  </div>
+  <div class="row">
+    <div id="13" value="13" class="col-lg-1 col-sm-1 col-1 box valid">1,3</div>
+    <div id="23" value="23" class="col-lg-1 col-sm-1 col-1 box valid">2,3</div>
+    <div id="33" value="33" class="col-lg-1 col-sm-1 col-1 box valid">3,3</div>
+    <div id="43" value="43" class="col-lg-1 col-sm-1 col-1 box valid">4,3</div>
+    <div id="53" value="53" class="col-lg-1 col-sm-1 col-1 box valid">5,3</div>
+    <div id="63" value="63" class="col-lg-1 col-sm-1 col-1 box valid">6,3</div>
+    <div id="73" value="73" class="col-lg-1 col-sm-1 col-1 box valid">7,3</div>
+    <div id="83" value="83" class="col-lg-1 col-sm-1 col-1 box valid">8,3</div>
+  </div>
+  <div class="row">
+    <div id="12" value="12" class="col-lg-1 col-sm-1 col-1 box valid">1,2</div>
+    <div id="22" value="22" class="col-lg-1 col-sm-1 col-1 box valid">2,2</div>
+    <div id="32" value="32" class="col-lg-1 col-sm-1 col-1 box valid">3,2</div>
+    <div id="42" value="42" class="col-lg-1 col-sm-1 col-1 box valid">4,2</div>
+    <div id="52" value="52" class="col-lg-1 col-sm-1 col-1 box valid">5,2</div>
+    <div id="62" value="62" class="col-lg-1 col-sm-1 col-1 box valid">6,2</div>
+    <div id="72" value="72" class="col-lg-1 col-sm-1 col-1 box valid">7,2</div>
+    <div id="82" value="82" class="col-lg-1 col-sm-1 col-1 box valid">8,2</div>
+  </div>
+  <div class="row">
+    <div id="11" value="11" class="col-lg-1 col-sm-1 col-1 box valid">1,1</div>
+    <div id="21" value="21" class="col-lg-1 col-sm-1 col-1 box valid">2,1</div>
+    <div id="31" value="31" class="col-lg-1 col-sm-1 col-1 box valid">3,1</div>
+    <div id="41" value="41" class="col-lg-1 col-sm-1 col-1 box valid">4,1</div>
+    <div id="51" value="51" class="col-lg-1 col-sm-1 col-1 box valid">5,1</div>
+    <div id="61" value="61" class="col-lg-1 col-sm-1 col-1 box valid">6,1</div>
+    <div id="71" value="71" class="col-lg-1 col-sm-1 col-1 box valid">7,1</div>
+    <div id="81" value="81" class="col-lg-1 col-sm-1 col-1 box valid">8,1</div>
+  </div>
+</div>
