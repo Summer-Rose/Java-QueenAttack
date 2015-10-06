@@ -1,18 +1,21 @@
 <h1 class="well">Queen Attack</h1>
-
-<h2>Playing chess? Check to see if your queen is in the position to attack!</h2>
-<h3>Enter the coordinates of your queen and your opponent's piece below.</h3>
+<h2>Playing chess? Check to see if your queen is in the position to attack</h2>
+#if($canAttack == true) 
+<h3><strong>You can attack!</strong></h3>
+#elseif ($canAttack == false)
+<h3><strong>Sorry, you're not currently in a position to attack.</strong></h3>
+#end
 <div class="form container">
 	<form class="form-horizontal" role="form" action="/queen-attack" method="post">
   		<div class="form-group form-group-lg">
   			<p>Your Queen:</p>
     		<div class="col-xs-3">
   				<label for="queenx">x-coordinate</label>
-  				<input class="form-control" type="number" min="1" max="8" name="queenx" id="queenx">
+  				<input class="form-control" type="number" min="1" max="8" name="queenx" id="queenx" value="queenx">
 			</div>
 			<div class="col-xs-3">
   				<label for="queeny">y-coordinate</label>
-  				<input class="form-control" type="number" min="1" max="8" name="queeny" id="queeny">
+  				<input class="form-control" type="number" min="1" max="8" name="queeny" id="queeny" value="queeny">
 			</div>
   		</div>
   		<hr>
@@ -20,11 +23,11 @@
   			<p>Your Opponent:</p>
     		<div class="col-xs-3">
   				<label for="opponentx">x-coordinate</label>
-  				<input class="form-control" type="number" min="1" max="8" name="opponentx" id="opponentx">
+  				<input class="form-control" type="number" min="1" max="8" name="opponentx" id="opponentx" value="opponentx">
 			</div>
 			<div class="col-xs-3">
   				<label for="opponenty">y-coordinate</label>
-  				<input class="form-control" type="number" min="1" max="8" name="opponenty" id="opponenty">
+  				<input class="form-control" type="number" min="1" max="8" name="opponenty" id="opponenty" value="opponenty">
 			</div>
   		</div>
   		<button type="submit" class="btn btn-warning">Submit</button>
@@ -113,3 +116,4 @@
     <div id="81" value="81" class="col-lg-1 col-sm-1 col-1 box valid">8,1</div>
   </div>
 </div>
+
